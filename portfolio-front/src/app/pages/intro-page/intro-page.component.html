@@ -1,0 +1,49 @@
+<div class="grid scroll-container">
+  <div class="row1">
+    <div class="col fade-in">
+      <div class="intro">
+        <h2 class="helloMessage">Welcome, I'm Daniel!</h2>
+      </div>
+    </div>
+  </div>
+
+  <div class="row2">
+    <div class="col">
+      <div *ngFor="let word of words" class="words">
+        <h2 class="helloMessage">{{ word }} </h2>
+      </div>
+    </div>
+  </div>
+
+  <div class="row3">
+    <div class="col">
+      <div class="profession1">
+        <h2 class="lang">C</h2>
+        <h2 class="lang">C++</h2>
+        <h2 class="lang">C#</h2>
+        <h2 class="lang">Google Test</h2>
+        <h2 class="lang">Embedded</h2>
+      </div>
+    </div>
+    <div class="col">
+      <div class="tech">
+        <h2 class="name">I'm familiar with technologies such</h2>
+      </div>
+    </div>
+    <div class="col" [style.opacity]="opacity">
+      <div class="profession1">
+        <app-card *ngFor="let card of cards" [title]="card.title" [description]="card.description" ></app-card>
+      </div>
+    </div>
+  </div>
+
+  <div class="row4">
+    <div class="col">
+      <div class="helloMessage">
+        <h2 class="name">Check out a few of my projects!</h2>
+        <button mat-raised-button color="primary" routerLink="home" class="button"><p>Projects</p></button>
+      </div>
+    </div>
+  </div>
+
+</div>

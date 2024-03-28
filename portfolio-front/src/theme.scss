@@ -1,0 +1,53 @@
+@use '@angular/material' as mat;
+
+@include mat.core();
+
+$md-backgroundpalette: (
+  50 : #e3e3e6,
+  100 : #bab8bf,
+  200 : #8c8995,
+  300 : #5d596b,
+  400 : #3b364b,
+  500 : #18122b,
+  600 : #151026,
+  700 : #110d20,
+  800 : #0e0a1a,
+  900 : #080510,
+  A100 : #6c53ff,
+  A200 : #4120ff,
+  A400 : #2200ec,
+  A700 : #1e00d3,
+  contrast: (
+    50 : #000000,
+    100 : #000000,
+    200 : #000000,
+    300 : #ffffff,
+    400 : #ffffff,
+    500 : #ffffff,
+    600 : #ffffff,
+    700 : #ffffff,
+    800 : #ffffff,
+    900 : #ffffff,
+    A100 : #ffffff,
+    A200 : #ffffff,
+    A400 : #ffffff,
+    A700 : #ffffff,
+  )
+);
+
+
+$theme-primary: mat.define-palette(mat.$indigo-palette, 500, 300, 700);
+$theme-accent: mat.define-palette(mat.$indigo-palette, A200, A100, A400);
+$theme-background: mat.define-palette($md-backgroundpalette, 500, 300, 700);
+$theme: mat.define-light-theme((
+  color: (
+    primary: $theme-primary,
+    accent: $theme-accent,
+    background: $theme-background,
+  ),
+  typography: mat.define-typography-config($font-family: 'Roboto, sans-serif'),
+  density: 0,
+));
+
+@include mat.core-theme($theme);
+@include mat.button-theme($theme);

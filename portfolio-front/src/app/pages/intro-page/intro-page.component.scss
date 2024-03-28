@@ -1,0 +1,245 @@
+
+.grid {
+  scroll-behavior: smooth;
+  width: 100%;
+  min-width: 300px;
+  max-width: 1000px;
+  margin:auto;
+  display: grid;
+  grid-template-rows: 250vh 100vh 150vh 250vh;
+  grid-auto-columns: minmax(0, 1fr);
+
+  .col{
+    display: flex;
+  }
+
+  .row1 {
+    justify-content: center;
+    grid-row: 1;
+    display: flex;
+    width: 100%;
+
+    .col {
+      display: flex;
+      grid-row: 1;
+      grid-column: 1;
+      position: sticky;
+      justify-content: center;
+
+      .intro {
+        animation-delay: inherit;
+        display: flex;
+        margin: 0 auto;
+        height: 15%;
+        width: 100%;
+        position: sticky;
+        top: 30%;
+        justify-content: center;
+
+        .helloMessage {
+          width:100%;
+          animation: scrollAnimation 1s ease-in-out infinite;
+          animation-delay: inherit;
+
+          height: 200px;
+          justify-content: center;
+          align-content: center;
+          font-size: 4rem;
+
+        }
+      }
+    }
+
+    .section1Col2 {
+      animation-delay: inherit;
+      display: flex;
+      height: 15%;
+      position: sticky;
+      top: 30%;
+      justify-content: center;
+
+      .words {
+        display: flex;
+        margin: 0 auto;
+        padding: 10px;
+
+        .helloMessage {
+          animation: scrollAnimation 1s ease-in-out infinite;
+          animation-delay: inherit;
+          justify-content: center;
+          align-content: center;
+          font-size: 3rem;
+
+        }
+      }
+    }
+
+    .section1Col3 {
+      display: flex;
+      grid-row: 1;
+      grid-column: 3;
+      position: sticky;
+
+      .intro {
+        .helloMessage {
+          animation: scrollAnimation 1s ease-in-out infinite;
+          animation-delay: inherit;
+          justify-content: center;
+          align-content: center;
+          font-size: 3rem;
+        }
+      }
+    }
+  }
+
+  .row2 {
+    justify-content: center;
+    grid-row: 2;
+    display: flex;
+    width: 100%;
+    height: 100%;
+
+    .col {
+      grid-column: 1;
+      position: sticky;
+      height: 100%;
+      justify-content: center;
+
+      .words {
+        animation-delay: inherit;
+        display: flex;
+        margin: 0 auto;
+        height: 30%;
+        padding: 20px;
+        width: 100%;
+        position: sticky;
+        top: 30%;
+        justify-content: center;
+        align-content: space-evenly;
+
+        .helloMessage {
+          align-content: space-evenly;
+          animation: scrollAnimation 1s ease-in-out infinite;
+          animation-delay: inherit;
+          justify-content: center;
+          font-size: 3rem;
+
+        }
+      }
+    }
+
+  }
+
+  .row3 {
+    justify-content: center;
+    grid-row: 3;
+    display: flex;
+
+    div{
+      border: 1px solid black;
+    }
+
+    .col {
+      grid-column: 1;
+      position: sticky;
+      height: 100%;
+      width:100%;
+      justify-content: center;
+      align-content: center;
+
+      .tech {
+        animation-delay: inherit;
+        height: 15%;
+        width: 100%;
+        position: sticky;
+        top: 30%;
+        align-content: center;
+        padding-bottom: 50%;
+
+        .name {
+          animation: scrollAnimation 1s ease-in-out infinite;
+          animation-delay: inherit;
+          display: flex;
+          margin: 0 auto;
+          text-align: center;
+          height: 100%;
+          font-size: 4rem;
+        }
+      }
+
+      .lang {
+        animation-delay: inherit;
+        display: flex;
+        font-size: 3rem;
+        text-align: center;
+        justify-content: center;
+        height: 10%;
+        width: 90%;
+        position: sticky;
+      }
+    }
+  }
+
+  .row4 {
+    justify-content: center;
+    grid-row: 4;
+    display: flex;
+    width: 100%;
+
+    .col {
+      position: sticky;
+      height: 100%;
+      justify-content: center;
+
+      .helloMessage {
+        animation-delay: inherit;
+        display: flex;
+        flex-direction: column;
+        margin: 0 auto;
+        height: 5%;
+        width: 100%;
+        position: sticky;
+        top: 30%;
+        justify-content: center;
+      }
+    }
+  }
+}
+
+.button {
+  display: flex;
+  padding: 50px 30px;
+  border-radius: 5px;
+  color: #333;
+  text-transform: uppercase;
+  cursor: pointer;
+
+}
+
+.scroll-container {
+  transition: scroll-behavior 0.5s ease-in-out;
+}
+
+
+.fade-in {
+  animation: fade-in 1s ease-in-out;
+
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);;
+  }
+}
+
+@media screen and (max-width: 300px) {
+  .grid {
+    grid-template-columns: 1fr;
+    grid-template-rows: 100vh 100vh 100vh;
+  }
+}
